@@ -1,0 +1,93 @@
+Introdução:
+O que é uma rede?
+    Uma rede de computadores nada mais pe do que um conjunto de sistemas de computado e outros dispositivo conectadis entre si por meio de um sistema de comunicação.
+    As rede de computadores permitem a troca de dados entre computadores e outros deispositivos eletrônicos.
+
+Módulo 1:
+Classificação de redes
+    Originalmente as redes de computadores existem principalmente em contextos comporativos, que utilizavam redes locais, mas com a globalização e a popularização da internet, a necessidade de trocar informações entre dispositivos tecnológicos aumentou e assim surgiram outros tipos de redes.
+
+        LAN:
+        Uma LAN é uma infraestrutura de rede que abrange uma pequena área geográfica. Este tipo de rede apresenta características especídicas:
+
+            - LANs interconectam dispositivos finais em uma área limitada, com uma casa, escola, prédio comercial ou campus.
+
+            - Uma LAN geralmente é admnistrada por uma única organização ou indivíduo.
+
+            - LANs fornecem largura de banda de alta velocidade para dispositivos finais internos e dispositivos intermediários, conforme mostrado na figura.
+
+        WAN:
+        Uma WAN é uma infraestrutura de rede que abrange uma ampla área geográfica.
+        As WANs são normalmente gerenciadas por provedores de serviços (SPs) ou provedores de serviços de internet (ISPs).
+            - As WANs interconectam LANs em amplas área geográficas, como cidades, estados, províncias, países ou continentes.
+            
+            - As WANs geralmente são administradas por vários provedores de serviços.
+        
+        WLAN:
+        A WLAN é a rede local que pode ser implantada sem a utilização de cabeamento. Ela utiliza ondas de rádio para conectar os dispositivos espalhados de rede.
+        Ao trabalhar com rede wireless, é importante entender que existem normas que devem ser seguidas para padronizar o funcionamento da solução.
+
+            802.11a:
+            Frequência de rádio - 5 GHz
+                - Velocidade de até 54 Mbps.
+                - Cobertura pequena.
+                - São menos eficazes na penetração de estruturas de edifícios.
+                - Não interoperáveis com 802.11b e 802.11g.
+            
+            80211b:
+            Frequência de rádio - 2.4 GHz
+                - Velocidades de até 11 Mbps.
+                - Alcance maior do que 802.11a
+                - Melhor capacidade de penetrar em estruturas de edifícios.
+
+            802.11g:
+            Frequência de rádio - 2.4 GHz
+                - Velocidades de até 54 Mbps.
+                - Backward compatível com 802.11b.
+                - Capacidade de largura de banda reduzida
+
+            802.11n:
+            Frequência de rádio - 2.4 e 5 GHz
+                - Taxa de dados variam de 150 Mbps a 600 Mbps com uma faixa de distância de até 70m (230 pés).
+                - APs e clientes sem fio exigem várias antenas usando a tecnológia MIMO.
+                - Compatível com dispositivo 802.11a/b/g com tacas de dados limitados.
+
+            802.11ac:
+            Frequência de Rádio - 5 GHz
+                - Fornece taxas de dados que variam de 450 Mbps a 1.3 Gbps (1300 Mbps), usando a tecnológia MIMO.
+                - Até oito antenas podem ser compativeis com dispositivos anteriores 802.11.a/n
+                - Com taxas de dados limitantes.
+
+            802.11ax:
+            Frequência de rádio - 2.4 e 5 GHz
+                - Padrão mais recente.
+                - Taxas de dados mais altos.
+                - Mais dispositivos conectados.
+                - Eficiência de energia melhorada.
+                - É capaz de atingir até 1.2 Gbps por fluxo.
+                - WI-FI Geração 6.
+
+            802.be:
+            Frequência de rádio - 2.4, 5, e 6 GHz.
+                - WI-FI Geração 7.
+                - Esta pe mais recente especificação Wi-fi, oficialmente lançada em janeiro de 2024.
+                - Velocidade Máxima de Transferência: Até 46 Gb/s.
+                - Tecnologia Multi-Link Operation (MLO): possibilita que dispositivos se conectem simultaneamente a múltiplas frequências de rede sem fio, otimizando a utilização do aspectro e melhorando a estabilidade da conexão.
+        VLAN:
+        Uma VLAN é
+
+        Confira os benefícios que uma rede VLAN pode proporcionar:
+             - Otimização no tráfego: o uso de VLANs faz com que o switch, ao receber um pacote tagueado, limite o dóminio de broadcast, encaminhando o pacote somente para as portas que fazem parte daquele grupo. Esse processo otimiza o trafégo. já que esses pacotes de broadcast não estarão ocupando desnecessariamente a banda referente a dispositivos com outras aplicações.
+
+             - Segurança: o uso de VLANs permite que o administrador da rede tenha uma garantia que alguém que esteja em uma VLAN "x" não tenha acesso aos dispositivos que fazem parte da VLAN "y", a não ser que o próprio administrador libete essa rota, fazendo um roteamento entre VLANs.
+
+             - Desempenho: não necessita de uma rede fisicamente separada para manter o desempenho esperado.
+
+        VPN:
+        VPN é uma rede virtual que proporciona uma conexão segura entre duas ou mais redes através de uma rede pública. Com ela o tráfego de dados é encaminhado através de um "túnel" virtual criptografado. Pode ser aplicada em sistemas de segurança ao ára acesso à rede corporativa quando um funcionário está fora da empresa.
+
+Modulo 2:
+Hardwares
+    Você já se questionou sobre quais são os equipamentos que permitem as conexões entre redes e como eles são articulados para que exista a conexão?
+
+
