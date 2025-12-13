@@ -74,7 +74,7 @@ Classificação de redes
                 - Velocidade Máxima de Transferência: Até 46 Gb/s.
                 - Tecnologia Multi-Link Operation (MLO): possibilita que dispositivos se conectem simultaneamente a múltiplas frequências de rede sem fio, otimizando a utilização do aspectro e melhorando a estabilidade da conexão.
         VLAN:
-        Uma VLAN é
+        Uma VLAN é uma rede local virtual, que tem como objetos segmentar, ou seja, dividir as redes de um determinado ambiente por serviços ou aplicações deferentes, ou seja, é uma rede criada virtualmente dentro de uma rede física
 
         Confira os benefícios que uma rede VLAN pode proporcionar:
              - Otimização no tráfego: o uso de VLANs faz com que o switch, ao receber um pacote tagueado, limite o dóminio de broadcast, encaminhando o pacote somente para as portas que fazem parte daquele grupo. Esse processo otimiza o trafégo. já que esses pacotes de broadcast não estarão ocupando desnecessariamente a banda referente a dispositivos com outras aplicações.
@@ -90,4 +90,33 @@ Modulo 2:
 Hardwares
     Você já se questionou sobre quais são os equipamentos que permitem as conexões entre redes e como eles são articulados para que exista a conexão?
 
+        Blindagem de cabo.
+        U/UTP - sem blindagem.
+        F/UTP - Blindagem de todos os cabos.
+        U/FTP - Blindagem individua de par e todos os cabos.
 
+            Entendendo a blindagem.
+            X/XXX
+                A primeira letra antes do "/" indica o tipo de blindagem contra interferência externas.
+                A primeira letra depois do "/" indica blindagem contra interferência entre os pares do cabo.
+
+    Métodos de transmissão.
+        Agora que você já conhece quais são os elementos que compõem uma rede, vamos entender como os dados são comunicados através desses componentes. 
+
+            UNICAST:
+                Comunicação direta entre dois dispositivos.
+
+            MULTICAST:
+                Comunicação com dispositivos pre-determinado
+
+            BROADCAST:
+                Envia comunicação para N disposição.
+
+    Tipologia:
+        Topologia é uma área da matemática que estuda a disposição e as propriedades dos diferentes elementos de um conjunto. No meio tecnológico utilizamos esse conhecimento para "estudar e descrever as interligações que compóem uma rede de computadores", tanto do ponto de vista físico, com lógico.
+        Com o tapologia é possivel definir como será estruturada a rede de computadores, ou sejá, como todos os dispositivos envolvidos serão conectados em uma única rede.
+
+            TOPOLOGIAS:
+                Fisica:
+                    
+                Lógica:
