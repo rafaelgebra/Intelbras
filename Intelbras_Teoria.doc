@@ -112,11 +112,75 @@ Hardwares
             BROADCAST:
                 Envia comunicação para N disposição.
 
-    Tipologia:
+    Topologia:
         Topologia é uma área da matemática que estuda a disposição e as propriedades dos diferentes elementos de um conjunto. No meio tecnológico utilizamos esse conhecimento para "estudar e descrever as interligações que compóem uma rede de computadores", tanto do ponto de vista físico, com lógico.
         Com o tapologia é possivel definir como será estruturada a rede de computadores, ou sejá, como todos os dispositivos envolvidos serão conectados em uma única rede.
 
             TOPOLOGIAS:
                 Fisica:
-                    
+                    Fisicamente conectados
                 Lógica:
+                    A maneira como os dados iram se comportar para ter um trafego mais eficiênte.
+
+            Exemplos de topologias:
+                Estrela: equipamento central onde os outros estão ligados a ele.
+                Árvore: forma hierárquica, interliga 2 ou mais redes estrelas.
+                Anel: possibilita redundançia
+                Hibrida: Associação entre as topologias do tipo Árvore/Anel ou Estrela/Anel.
+
+Modulo 3:
+    Modelos de Referência.
+    Uma dificuldade bem comum quando estamos estudando rede é entender como comunicação realmente funciona. Inicialmente isso pode parecer difícil já que não podemos, por assim dizer, assistir os pacotes de dados sendo transmitidos de um ponto a outro. Por isso, foi instituído pela ISO, um modelo para servir como referência no entendimento do funcionamento de rede de computadores. Esse é o modelo OSI, sobre o qual vamos estudar agora.
+            OSI significa. Sistema de Interconecção de Sistemas Abrertod (OPEN SUSTEM INTERCONNECTION).
+                O modelo OSI é composto por 7 camadas.
+
+                    7 - Aplicação
+                    6 - Apresentação
+                    5 - Sessão
+                    4 - Transporte
+                    3 - Rede
+                    2 - Enlace de dados
+                    1 - Fisíca
+
+                    Aplicação:
+                        Composta por protocolos ou serviços destinados a aplicação do usúario. (Acesso a interfaçe WEB com o HTTP/HTTPS)
+
+                    Apresentação:
+                        Conversão dos formatos dos caracter para que possam quer usados em uma transmição.
+
+                    Sessão:
+                        Responsavel pela comunicação estre dois processos que estão em hosts diferêntes (controla quando deve começar e terminar ou reiniciar a comunicação)
+
+                    Transporte:
+                        Tem a funcão de identificar e eliminar erros encontrador em camadas inferiores, também é responsavel pelo controle de fluxo de dados da origem e do destino dos dados.
+
+                    Rede:
+                        Responsavel pelo endereçamento dos dispositivos, bem como as rotas ou caminhos que os dados vão percorrer da origem até o destino.
+
+                    Enlace de dados:
+                        Função de detectar e corrigir defeitos na camada fisíca, além de fazer um controle dos fluxo de dados transmitidos entre os dispositivos.
+
+                    Física:
+                        Estabele a comunicação entre 2 ou mais dispositivos (responsavel pelas caracteriticas eletrica, oticas ou eletra maguineticas)
+
+                    
+                Referência a Modelos OSI e Modelos TCP/IP :
+
+                                Modelo OSI       camada     Modelo TCP/IP
+                    Camada 7    Aplicação           4       Aplicação
+                    Camada 6    Apresentação
+                    Camada 5    Sessão
+                    Camada 4    Transporte          3       Transporte
+                    Camada 3    Rede                2       Internet
+                    Camada 2    Enlace de dados     1       Interface de Rede
+                    Camada 1    Fisíca
+
+        Modelos de referência OSI e modelos TCP/IP.
+            As tecnologias de rede foram desenvolvidas muito rapidamente nos estágios iniciais. Os fornecedores desenvolveram protocolos proprietários e, portanto, os dispositivos de diferentes não podem funcionar uns com os outros.
+            Para resolver os prolemas de compatibilidade, a ISO desenvolveu o modelo de referência OSI (OPEN SYSTEM INTERCONNECTION, ou "INTERCONEXÃO DE SISTEMAS ABERTO), que rapidamente se tornou o modelo basíco de comunicação entre computadores.
+            O modelo de referência OSI, entretanto, não prevaleceu por vários modelos. Em vez disso, a pilha de protocolo TCP/IP tornou-se popular, Ela foi inicialmente financiada e desenvolvida para a DARPA (DEFENSE ADVANCED RESEARCH PROJECTS AGENCY, ou "AGÊNCIA DE PROJETOS DE PESQUISA AVANÇADA DE DEFESA") na década de 1960 e usada na ARPANET (ADVANCED RESEARCH PROJECTS AGENCY NETWORK, ou "AGÊNCIA DE PESQUISAS EM PROJETOS AVANCADOS")
+
+        Modelos de refência OSI.
+            Camadas de modelo de referência OSI.
+                Hoje em dia. as pessoas podem usar facilmente "dispositivos" de diferentes fornecedores para criar redes sem se preocupar com problemas de compatibilidade. No entanto, isso não era verdade para as redes nos estágios iniciais, quando institutos e fornecedores desenvolveram seus próprios sistemas operacionais que não eram compatíveis. Sem um padrão uniforme, esses sistemas não podiam se interconectar uns com os outros.
+                Alguns dos principais participantes da área de comunicação de dados desenvolveram seus próprio padrões, como o SAN da IBM, o IPX/SPX da novell, o Apple, o Deca
