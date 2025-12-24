@@ -183,4 +183,134 @@ Modulo 3:
         Modelos de refência OSI.
             Camadas de modelo de referência OSI.
                 Hoje em dia. as pessoas podem usar facilmente "dispositivos" de diferentes fornecedores para criar redes sem se preocupar com problemas de compatibilidade. No entanto, isso não era verdade para as redes nos estágios iniciais, quando institutos e fornecedores desenvolveram seus próprios sistemas operacionais que não eram compatíveis. Sem um padrão uniforme, esses sistemas não podiam se interconectar uns com os outros.
-                Alguns dos principais participantes da área de comunicação de dados desenvolveram seus próprio padrões, como o SAN da IBM, o IPX/SPX da novell, o Apple, o Deca
+                Alguns dos principais participantes da área de comunicação de dados desenvolveram seus próprio padrões, como o SAN da IBM, o IPX/SPX da novell, o Apple, o DECNET da DEC e i TCP/IP, atualmente o mais popular. Eles lançaram doferentes produtos de hardware com base em seus padrões. Sem dúvida, seus esforços promoveram o desenvolvimento de tecnoligias e dispositivos de rede, mas as redes baseadas em padrões tão diferentes se tornaram mais complicadas e a maioria dos dispositivos de diferentes fornecedores não conseguia funcionar entre si.
+
+                Para resolver o sproblemas de compatibilidade, a ISO desenvolveu o modelo de refenrência OSI em 1984, que rapidamente se tornou o modelo básico para comunicações por computador.
+
+                É importante entender que o modelo de refenrência OSI descreve como transferir informações entre dispositivos de rede de forma teórica. Ele não define a implementação de hardware e software em diferentes camadas, como faz o TCP/IP. Portanto, o modelo de referência OSI é usado com mais frequências como uma ferramenta de ensino. Ao conpreender os conceitos básicoas do modelo de refenrência OSI, você pode aplicá-lo a protocolos reais para obter uma melhor compreensão.
+
+                O modelo de refenrência OSI define uma arquitetura em camadas, que separa uma função complexa em componentes mais simples. Ele divide o processo de comunicação de rede em sete camadas, que são independentes uma das outras em termos de design, função e teste, sem depender de um sistema operacional ou de outros fatores.
+
+                    O modelo de refenrência OSI oferece os seguintes benefícios:
+                     - Define interfaces abertas e padrão entre as camadas para permitir que os fornecedores desenvolvam livremente seus produtos.
+                     - Permite o aprendizado, a compreensão e a atualização de protocolos porque você pode aprender os protocolos de cada camada independentemente, e as modificações no protocolo de uma camada não afetam os protocolos de outras camadas.
+                     - Permite o design modular, o que significa o desenvolvimento do produto. Cada fornecedor pode se concentrar no desenvolvimento de uma única camada ou de um único módulo. Isso redus a complexidade e os custos de desenvolvimento e melhora a eficiência do desenvolvimento.
+                     - Simplifica a solução de problemas. Quando ocorre uma falha, você pode localizá-la facilmente em uma camada especíca e solucioná-la.
+
+                Relações entre camadas e encapsulamento de dados do modelo de referência.
+                    Comunicação entre programas de aplicativos                      7 - Camada de Aplicação
+                    Processamento e criptografia de formato de dados                6 - Camada de Apresentação
+                    Estabelecimento, manutenção e gerenciamento de sessão           5 - Camada de Sessão
+                    Estabelecimento de conexão ponta a ponta                        4 - Camada de Transporte
+                    Endereçamento e seleção re rotas                                3 - Camda de Rede
+                    Acesso a mídia e gerenciamento do link                          2 - Camada de Interface de Rede
+                    Transmissão de fluxo de bits                                    1 - Camada Física
+
+                O modelo de refenrência OSI define as funções de cada camada para cumprir taredas especificas de comunidação, e cada camada troca dados apenas com as camadas adjacentes.
+
+                A camada físida envia fluxos de bits pela mídia física. Ela define as especifições mecânicas, eletricas, funcionais e processuais, incluindo tensão, tipo de cado, taxa te dados e tipos de interface.
+
+                A camada de inteface de rede controla a camada física, detectando e corrigindo erros e realizando o controle de fluxo.
+                Ela também é relevante para o endereçamento físico, a topologia da rede e o planejamento de cabos.
+
+                A camada de rede encaminha os pacotes entre as redes por meu de rotas ideais. Ela usa protocolos de roteamento para o cálculo de rotas.
+
+                A camada de transporte recebe dados da camada de sessão. Ela pode dividir um bloco de dados em segmentos quando necessário e enviá-los para a camada de rede. A camada de transporte é responsavel dela correção de cada segmento, pelo estabelecimeto e manutenção de links, pelo controle de erros e pelo controle de fluxo.
+
+                A camada de sessão estabelece, gerencia e encerra sessões de aplicações de aplicativos entre dispositivos. Elas é responsavel pela negociação duplex e pela sincronização da sessão. Além disso, os aplicativos conhecem as informações de status uns dos outros por meio da camada de sessão.
+
+                A camada de apresentação se preocupa com a sintaxe e a semântica das informações a serem transmitidas. Ela traduz is formatos específicos do dispositivo dos dados da camada de aplicação para formatos de dados irrelevantes para o computador, a fim de garantir que a extremidade receptora passa resolver corretamente os dados. A camada de apresentação também é responsavel pela criptografia de dados.
+
+                A camada de aplicação é a mais próxima do usuário  final entre todas as camadas OSI. Ela fornece serviços de rede para aplicativos, incluindo transferência de arquivos, gerenciamento de arquivos e processamento de mensagens de e-mail.
+
+                    7 - Camada de Aplicação         <---------APDU--------> 7 - Camada de Aplicação
+                    6 - Camada de Apresentação      <---------PPDU--------> 6 - Camada de Apresentação
+                    5 - Camada de Sessão            <---------SPDU--------> 5 - Camada de Sessão
+                    4 - Camdade de Transponte       <-------Segmento------> 4 - Camada de Transporte
+                    3 - Camada de Rede              <--------Pacote-------> 3 - Camada de Rede
+                    2 - Camada de interface de Rede <--------Quadro-------> 2 - Camada de interface de Rede
+                    1 - Camade Fisíca               <----------Bit--------> 1 - Camada Fisíca
+
+                Os dados são chamados de APDUs (Aplication Protocol Data Units, ou "Unidades de Dados de Protocolo da Camada de Aplicação") na camada de aplicação, de PPDUs (Presentation Protocol Data Units, ou "Unidade de Dados de Protocolo da Camada de Apresentação") na camada de apresentação, de SPDUs (Session Protocil Data Units, ou "Unidade de Dados de Protocolo de Camada de Sessão") na camada de sessão, segmentos na camada de transponte, pacotes na camada de rede, quadros na camada de interface de rede e bits na camada física.
+
+                No modelo de referência OSI, um processo de comunicação entre dois hosts envolve comunicações entre camadas pares, mas as comunicações entre camadas pares não sãp realizadas diretamente, Em vez disso, uma camada precisa da ajuda da camada imediatamente inferior para se comunicar com a camada de pares.
+
+                A camada inferior fornece serviços para a camada superior por meio de SAPs (Service Access Points, ou "Pontos de Acesso ao Serviço"). Por exemplo, a camada de transporte do host de envia se comunica com a camada de transporte no host de recebimento por meio de segmentos. Os segmentos são encapsulados em pacotes na camada de rede, os pacotes são encapsulados em quadros na camada de interface de rede e os quadros são convertidos em bits, que são enviados par a camada física. Depois de chegar ao host receptor, os dados são processados pela camada de interface de rede, pela camada de rede e pela camada de transporte, respectivamente. Dessa forma, a comunicação entre as  camadas pares e implementada.
+
+                Para garantir a transferência correta de dados, cada par de camadas de pares deve usar o mesmo protocolo para comunicação. Por exemplo, o programa de e-mail em um host pode se comunicar com o programa de e-mail em outro host na camada de aplicativo, mas não pode se comunicar como outros programas, como o Telnet.
+
+                Cada camada acrescenta informações aos dados recebidos das camadas superiores prefixando cabeçalhos, às vezes também anexando trailers aos dados. Esse processo e chamado de  encapsulamento. Os dados originais tornam-se então, carga útil.
+
+                Cada camada OSI na extremidade de envio encapsula os dados recebidos da camada superior para garantir que os dados cheguem à extremidade de recebimento. Na extremidade receptora, cada camda desempacota os dados recebidos antes de enviá-los à camada superior.
+        
+        Modelos TCP/IP
+            O modelo de refência OSI facilita muito a compreensão da estrutura da internet, o desenvolvimento de produtos de rede e o projeto de rede.
+
+            Entretanto, o modelo de referência OSI é muito complexo para ser implementado completamento.
+            As camads do modelo de referência OSI têm funções sobrepostas e, portanto, a eficiência baixa.
+
+            Açém disso, quando o modelo de referência OSI nunca se tornou predominandte e não foi desenvilvido nenhum conjunto de protocolos que esteja totalmente em conformidade com o modelo de referência OSI.
+
+            7 - (Camada de Aplicação
+            6 - Camada de apresentação      <---->  Camada de aplicação
+            5 - Camada de seção)
+            4 - Camada de transporte        <---->  Camada de transporte
+            3 - Camada de rede              <---->  Camada de Internet
+            2 - (Camada interface de rede
+            1 - Camada fisíca)              <----> Camada de Interface de rede
+
+                Estrutura em camadas.
+                    Semelhantes ao modelo de referência OSI, o TCP/IP també, usa uma estrutura em camadas em que cada camada oferece diferentes funções de comunicação.
+
+                    O TCP/IP simplifica a estrutura em camadas e consiste em apenas quatro camadas: a camada de aplicação, a camada de transporte, a camada de internt e a camada de interface de rede.
+
+        Camada de interface de rede:
+            O TCP/IP não tem uma descrição rígida para a camada abaixo da camada da internet. No entento, um host TCP/IP deve usar um determinado protocolo de camada inferior para se conectar à rede.
+
+            Além disso o TCP/IP deve suportar vários protocolos de camada inferior para implementar comunicação de rede ponta a ponta que sejam independentes de links.
+
+            A camada de interface de rede TCP/IP processa os detalhes da mídia de transmissão e fornece à camada superior interfaces de rede coerentes.
+
+            Portanto, a camada de interface de rede do modelo TCP/IP corresponde à camada de interface de rede e à camada fisíca do modelo de refenência OSI e geralmente inclui placas de interface de rede e drivers de interface para computadores e dispositivos de rede.
+
+            O TCP/IP suporta a maioria das tecnologias de LAN e WAN. Essas tecnologias pertencem à camada de inteface de rede.
+
+            As tecnologias da LAN: Ethernet
+
+            Tecnologias de conexão serial: HDLC e PPP. Essas conexões são consideradas antigas, oferecendo baixa taxa de transferência, mas foram amplamente utilizadas em comunicações de longa distância no passado.
+        
+        Camada de Transporte:
+            - A camada de transporte fornece conexões ponto a ponto para a comunicação de programas aplicativos em dois hosts quaisquer de modo que os pares nos host de origem e destino  possam se comunicar entre si.
+
+            -  A camada de transporte de pilha de protocolos TCP/IP inclui principalmente o TCP (Transmission Control Protocol, ou "Protocolo de Controle de Transmissão") e o UDP (User Darafram Protocol, ou "Protocolo de Daragrama do Usuário").
+            O TCP é orientado para a conexão, proporciona uma transmissão confiável entre as partes da comunicação e oferece suporte à remontagem de fragmentos, retransmissão de erros e controle de fluxo. O UDP não tem conexão, oferece transmissão de dados não confiável e deixa a camada de aplicação garantir a confiabilidade da trasnmissão de dados.
+        
+        Camada de Aplicação:
+            O modelo TCP/IP não tem camada de sessão e camada de apresentação separadas. As funções dessas duas camadas estão incluídas na camada de aplicativos.
+
+            A acamada de aplicação interage diretamente com os usuários e os aplicativos para que os programas passam usar os serviços de rede, inclusive transferência de arquivos, gerenciamento de arquivos e serviçõs de e-mail.
+
+            Os protocolos típicos da camada de aplicação incluem Telnet (Teletype Network, ou "Rede de teletio"), FTP (File transfer Protocol, ou "Protocolo de Transferência de Arquivos"), SMTP (Simple Mail Transfer Protocal, ou "Protocolo Simples de transferência de Correio") e SNMP (Simple Network Management Protocol, ou "Protocolo Simples de Gerenciamento de Rede").
+
+            O Telnet permite que um terminal acesse um servidor remoto.
+
+            o FTP é um padrão da internet para transferência de arquivos. Ele é compatível com arquivos de texto, como arquivos ASCII e binários, e arquivos com uma estrutura orientada por fluxo de bytes.
+
+            O FTP usa TCP para oferecer transferência de arquivos confiável orientada por conexão. É adequado para a transferência de arquivos em um caminho de longa distância e não confiável.
+
+        Camada de aplicação:
+            O TFTP (Trivial File Transfer Protocal, ou "Protocolo Simples de Transferência de Arquivos") transfere arquivos usando UDP e, portanto, não é confiável. Ele é adequando para a transferência de arquivos em uma LAN.
+
+            A SMTP transdere e-mails de texto dela internet. Todos os sistemas operacionais têm um programa cliente que usa o SMTP para receber e erviar e-mails, e a maioria dos provedores de serviços de internet (ISPs) usa SMTP para fornecer serviços de correio eletrônico. O SMTP foi projetado para transferir e-mails em vários ambientes de rede.
+
+            Ele se preocupa com a forma como um e-mail é entregue, e não se o-mail chega corretamente ao destino. O SMTP tem um recurso robusto de processamento de e-mail que permite que um e-mail seja encaminhadi automaticamente com base em um padrão específico. O SMTP pode informar imediatamente o usuário se o endereço de e-mail não existir e devolve ao remetente um e-mail não entregue em um determinado período de tempo.
+
+            O SNMP monitora e mantém os dispositivos de rede e fornece gerenciamento de segurança e desempenho.
+
+            O protocolo de HTTP (Hypertext Transfer Protocol, ou "Protocolo de Transferência de Hipertexto") é a base da World Wide Web (WWW). A maioria das páginas da Web é transferidas na Internet por meio do HTTP.
+
+    Módulo 4:
+        Protocolos: Modelo TCP/IP
+            Para que os dispositivos finais possam se comunicar em uma rede, cada um deles deve seguir as mesmas instruções ou o mesmo conjunto de regras. Em redes essas regras são chamadas de protocolos. Esses protocolos definem como será estabelecida a comunicação.
+
+            Vamos conhecer os pricipais protocolos utilizados e cada camada do modelo TCP/IP, aperte a play!
