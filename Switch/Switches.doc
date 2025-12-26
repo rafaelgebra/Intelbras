@@ -1,0 +1,25 @@
+Características switches série 2000 e 3000:
+    Os switches gerenciáveis apresentam recursos adicionais quando comparados aos switches não gerenciáveis, o equimento pode ser configurado e monitorado pelo administrador da rede trazendo benefícios o arganização.
+
+        Spanning tree:
+            É uma função que evita a ocorrência de loops na rede gerados por caminhos redundantes na camada de enlace de uma topologia. Ele foi desenvolvido para evitar que pacotes de daldos fiquem presos em loops infinitos e causem congestão e falhas na rede, garantindo assim o desempenho da rede.
+
+        PoE Max:
+            Aumenta a potência PoE total no switch e viabilizando a conexão de um maior número de dispositivos que damandam maior consumo de energia.
+
+        SPF/SPF+:
+            AS portas SPF e SPF+ permitem a conexão de fibras ópticas para expandir a conectividade da rede em distância maiores usando essa tecnologia.
+            As portas SPF possibilitam conexões de uplink de até 1GB e as SPF+ de até 10BG.
+
+        IPv6:
+            Compatível com a versão mais recente do Protocolo de internt, o IPv6 permite um número maior de conexões, açém de oferecer maior segurança aos usuários.
+            
+        Roteamento estatico.
+            Com o roteamento estatico e roteamento inter-VLAN é possivel especificar uma ou mais rede de destino manualmente para diferentes segmentos de rede, permitindo também encaminhar o tráfego de uma VLAN para outra.
+        
+        Diferenciais série 3000:
+            Através das portas SPF+, é possível realizar o empilhamento virtual dos switches da série 3000, fazendo com que equipamentos do mesmo modelo operem juntos como se fossem um único equimento.
+
+            Além disso esse equipamentos operam na camada 3 de rede, realizam o reteamento do tráfego com base em endereços IP, viabilizando a comunicação entre redes diferentes. Esses switches também incluem protocolos de roteamento dinâmico, o que significa que são capazes de ajustar automaticamente o tráfeco para a melhor rota de forma automárica.
+
+            Esses recursos tornam os switches da série 3000 mais adequados para redes maiores e mais complexas que exigem um controle mais avançado dobre o tráfego e a conectividade.        
