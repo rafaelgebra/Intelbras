@@ -290,7 +290,7 @@ Modulo 3:
 
             A acamada de aplicação interage diretamente com os usuários e os aplicativos para que os programas passam usar os serviços de rede, inclusive transferência de arquivos, gerenciamento de arquivos e serviçõs de e-mail.
 
-            Os protocolos típicos da camada de aplicação incluem Telnet (Teletype Network, ou "Rede de teletio"), FTP (File transfer Protocol, ou "Protocolo de Transferência de Arquivos"), SMTP (Simple Mail Transfer Protocal, ou "Protocolo Simples de transferência de Correio") e SNMP (Simple Network Management Protocol, ou "Protocolo Simples de Gerenciamento de Rede").
+            Os protocolos típicos da camada de aplicação incluem Telnet (Teletype Network, ou "Rede de teletio"), FTP (File transfer Protocol, ou "Protocolo de Transferência de Arquivos"), SMTP (Simple Mail Transfer Protocol, ou "Protocolo Simples de transferência de Correio") e SNMP (Simple Network Management Protocol, ou "Protocolo Simples de Gerenciamento de Rede").
 
             O Telnet permite que um terminal acesse um servidor remoto.
 
@@ -299,7 +299,7 @@ Modulo 3:
             O FTP usa TCP para oferecer transferência de arquivos confiável orientada por conexão. É adequado para a transferência de arquivos em um caminho de longa distância e não confiável.
 
         Camada de aplicação:
-            O TFTP (Trivial File Transfer Protocal, ou "Protocolo Simples de Transferência de Arquivos") transfere arquivos usando UDP e, portanto, não é confiável. Ele é adequando para a transferência de arquivos em uma LAN.
+            O TFTP (Trivial File Transfer Protocol, ou "Protocolo Simples de Transferência de Arquivos") transfere arquivos usando UDP e, portanto, não é confiável. Ele é adequando para a transferência de arquivos em uma LAN.
 
             A SMTP transdere e-mails de texto dela internet. Todos os sistemas operacionais têm um programa cliente que usa o SMTP para receber e erviar e-mails, e a maioria dos provedores de serviços de internet (ISPs) usa SMTP para fornecer serviços de correio eletrônico. O SMTP foi projetado para transferir e-mails em vários ambientes de rede.
 
@@ -309,8 +309,204 @@ Modulo 3:
 
             O protocolo de HTTP (Hypertext Transfer Protocol, ou "Protocolo de Transferência de Hipertexto") é a base da World Wide Web (WWW). A maioria das páginas da Web é transferidas na Internet por meio do HTTP.
 
-    Módulo 4:
-        Protocolos: Modelo TCP/IP
+Módulo 4:
+    Protocolos: Modelo TCP/IP
+
+        Camada APLICAÇÃO:
             Para que os dispositivos finais possam se comunicar em uma rede, cada um deles deve seguir as mesmas instruções ou o mesmo conjunto de regras. Em redes essas regras são chamadas de protocolos. Esses protocolos definem como será estabelecida a comunicação.
 
-            Vamos conhecer os pricipais protocolos utilizados e cada camada do modelo TCP/IP, aperte a play!
+            1º Protocolo na camada de aplicação é o HTTP (Hypertext Transfer Protocol)
+                É usado para visualizar paginas da internet, esse protocolo define a maneira como o servidor e o cliente web deve interagir.
+                
+            2º Protocolo na camada de aplicação é o HTTPS (Secure Hypertext Transfer Protocol)
+                É uma evoloção do HTTP, tem os mesmo protocolos mas tem alguns recursos a mais/adicionais de segurança, dessa forma o HTTPS garante que todos os dados que estão sendo transferidos pela internet pelos navegadores e pelos servidores sejão embaralhodos, dessa forma fica impossivel de serem lidos caso um haker tente intercepitalos.
+
+            3º Protocolo FTP (File Transfer Protocol).
+                Para transferir arquivos de um computador para um servidor DENTRO de uma rede, ultiliza o protocolo FTP.
+            
+            4º Protocolo SFTP (Secure File Transfer Protocol)
+                Ele atua como o FTP porém com recurso adicionais de segurança, isso faz com que os arquivos transferidos sejão criptografado.
+
+            5º Protocolo DNS (Domain Name System) ele é fundamental na aplicação da camade de aplicação.
+                Ele é importante porque ele consegue fazer a "leitura" dos números de cada servidor e página web que precisamos. Nós seres humanos usamos nomes como nos comunicar, já os computadores usam números, como por exemplo endereço ip. O DNS faz essa tradução para nós, senão teriamos que ficar digitando os numeros dos ip de cada site.
+
+            6º protocolo DDNS (Dynamic Domain Name System)
+                Não é a mesma coisa que DNS, é usado para endereço ip dinamico. É um serviço que nos permite acessar os dispositivos que temos em casa, por exemplo: Roteador, computador, camera.... esse acesso pode ser feito em qualquer parte do mundo mesmo que o endereço ip mude, isso acontece por que as residências normalmente recebe um ip dinamico privado não um ip publico estático.
+
+            6º Protocolo SNMP (Simple Network Management Protocol)
+                Serve para administrar uma rede, consegue gerencias todos os hosts como servidor, computador, switch, moldem, DVR camera. Também ajuda procurar problemas e resolveos.
+
+            7º Protocolo DHCP (Dynamic Host Contiguration Protocol), é o protocolo mais usado nessa aplicação da camada.
+                É responsavel que os host em uma rede recebam um endereço ip de maneira automatica.
+                    Ao ligar um host em um rede, ele ira enviar um broadcast (DHCPDISCOVER) na rede para o servidor DHCP mais proxímo buscando o endereço ip disponivel para usar, os hosts que não tiver nem um ip disponivel para usar eles descantão essa solicitação, mas o servidor DHCP vai responder com uma oferta de endereço (DHCPOFFER), e essa oferta de endereço inclui um tempo de aluguel. Ao redeceber essa oferta de endereço ip o host responder com o (DHCPREQUEST), dizendo que aceita essa oferta de endereço se tudo estiver correto e o endereço ip ainda estiver disponivel o servidor DHCP responde com o pacote (DHCPACK) confirmado o alugue do endereço. Caso o endereço de ip já esteja em uso o servidor DHCP responte (DHCPNAK) e começa a negociação novamente.
+
+            8º Protocolo SMTP (Simple Mail Transfer Protocol)
+                É um protocolo que é usado para enviar e-mail. Básicamente é um conjunto de comando que ao autentica e direciona transferencia de e-mail 
+
+            9º Protocolo RTSP (Real Time Streaming Protocol)
+                Faz o controle nas transferencia de dados em tempo real.
+
+            10º Protocolo RTMP (Real Time Menssaging Protocol)
+                Serve para criar uma conecção entre um equipamento que será usado para Streaming e o servidor que deseja ver a mídia (youtube por exemplo).
+
+            11º IEEE 802.11ax
+                Posibilita aumentar a securança de acesso ao usuáro em redes locais.
+                
+        Camada Transporte:
+            TCP (Transmission Control Protocol) Protocolo de controle de transmissão
+                É um protocolo que garante a entrega dos dados de forma integra e ordenada.
+                
+            UDP (User Datagram Protocol) Protocolo de Datagrama de Usuário.
+                Esse protocolo não se preoculpa com isso, ele também é responsavel pelo transporte das informações porém não requer confirmação do receptor, por isso não é ultilizado para transmissão de dados em rede local ou internet.
+
+            Dentro da camada de transporte também é importânte falar do QoS.
+                QoS (Quality of Service) Qualidade de Serviço
+                    Os pacotes são marcados com diferente niveis de prefência baseados em sua aplicação (voz, dados , vídeos)
+                    Quando o volume de dados é maior que o volume suportado para ser transportado pela rede, os dispositivos criam uma fila na memoria até que os recursos estejam disponiveis para o transporte. Esse enfileiramento causa atraso pois, os novos pacotes não podem ser tranmitidos até os pacotes anterior sejam processados.
+                    Se a quantidade de pacotes continuar a aumentar a memoria do dispositivo vai ficar cheia e os pacotes serão descartados.
+
+        Camada de Rede:
+            O protocolo mais conhecido na camada de rede é o protocolo IP (Internet Protocol).
+                Ele é responsavel em identificar cada host conectado na rede. Atualmente tem dois tipos de endereçamento (IPV4 e IPV6).
+
+        Camada de enlace de Dados:
+            O protocolo Ethernet tem a responsabilidade de garantir a entrega de dados em interface de redes diferentes desde que ambus estejam na mesma rede local.
+Modulo 5:
+    Endereçamento:
+        No modulo anterior estudamos o protocolo IP, da camada de rede. Esse protocolo é o responsável por identificar cada host conectado à rede.
+
+        Como mencionado, atualimente temos dois tipos de enderegamento, IPv4 e o IPv6.
+
+        Neste módulo vamos explicar cada um deles, começando pelo IPv4, que é a versão mais usada hoje em dia para identificar um dispositivo na rede.
+
+        IPv4:
+            O endereçamento é representado por 4 conjunto de 8 números (octetos) ou "4 octetos = 32 bits. 
+                O IPv4 tem limite de conecções por isso é dividido em duas tipod de aplicações, endereços PRIVADOS e enredeços PÚBLICOS
+
+                Os endereços PRIVADOS são conhecidos somente dentro de uma rede LAN e não são conhecidos pela internt.
+                Já os endereços PÚBLICOS são conhecidos na internt, ou sejá, uma aplicação que ultiliza um IP PÚBLICO pode ser acessado de qualquer lugar do mundo sem a necessidade que algum serviço adicional como o DDNS.
+                    Isso é possivel pelo recurso chamado NAT (Network Address Translation) Tradução de endereços de rede, o seu principal objetivo é manter o endereço PÚBLICO.
+                    Um unico enredeço IPv4 PÚBLICO pode ser compartilhado por até centenas ou até milhares de dispositivos. Quem faz essa técnica geralmente é o roteador.
+                    Um ponto importante sobre o IPv4 é que ele é dividido em Classes e temos que como isso funciona.
+                        Classe A o primeiro octeto não muda, posibilitanto que os outros 3 octetos sejão utilizados para identificar os hosts.
+                        E assim vai mudando conforme a classes vai alterando.
+                            Classe A |1 a 126|0 a 255|0 a 255|0 a 255|
+                            Classe B |128 a 191|0 a 255|0 a 255|0 a 255|
+                            Classe C |192 a 223|0 a 255|0 a 255|0 a 255|
+
+            Como funciona o endereço ip:
+                Cada um desses conjuntos tem a caracteristica de 8 bits, isso significa que tem 8 variações entre 0 e 1, tendo um total de 256 variações por classes
+
+                Exemplo: IP 192.168.0.1/24 o 24 significa de os 3 primeiros octetos não serão alterados (192.168.0.), então isso mostra que tem de 0 à 255 endereços disponiveis.
+                Além disso tem o que é conhecido como endereços validos para hosts, o primeiro e o ultimo endereço são reservados para fluncões especificas por isso não podem ser atribuidas a nem um host, o primeiro é o que identifica a rede e o ultimo o de broadcast. Com isso pode afirmar que neste exemplo temos 254 endereços disponiveis para hosts que vai de 1 a 254
+
+                Segundo elemento importante pe a mascara assim como o prefixo sever para determinar o tamanho da sub rede, ou seja quantos entãos disponiveis para hosts e quantos estão disponiveis para rede.
+
+                VLSM (Variable Length Subnet Masking): Mascaramento de Sub-Rede de comprimento Varíavel
+
+                    Como fazer, exemplo:
+                        IP          192.168.0.1
+                        Mascara     255.255.255.224 Observando a mascara podemos notar que o octeto que não esta completo é o ultimo então é da classe C, e com isso podemos fazer uma conta para identificar a quantidade de hosts que a rede suporta/disponivel.
+
+                        Para descobrir tem que converte o octeto incompleto para binario, e para isso temos que escrever de trás para frente sempre dobrando o ultimo valor até chegar em 255 començando pelo número 1.
+
+                            128 64 32 16 8 4 2 1, cada um desses números representa um bit desse octeto. Para converter 224 para binario é preciso marcar em baixo deses número uma marcassão de 0 e 1 até.
+                            Para facilitar a contra marque o número 1 em baixo do maior número menor que 224 ou seja 128, depois marque com o número 1 o número somando sejá igual o menor que 224, como ainda não chegou no numero 224 soma o proximo valor somando de igual e melhor que 224.
+
+                            128 64 32 16 8 4 2 1,
+                            1  1  1   0 0 0 0 0
+                            sub-rede   Host
+
+                            A quantidade de números 0 representa os endereços para hosts e o de números 1 representa as rede disponiveis.
+                            Para saber a quantidade de hosts que a rede vai suporte tem que fazer a seguinte conta.
+                            5
+                            2 = 32
+                            Onde 2 representa o composta binario e 5 a quantidade de 5, e em uma rede sempre se desconsidera o primeiro e o ultimo endereço porque já tem função especifica em o vaor de host é 30
+                            5
+                            2 = 32 - 2 = 30 hosts.
+            
+            Outro elemento principal pe o Gateway.
+                É o um endereço IP que normalmente é configurado no roteador de borda
+    IPv6:
+        Como falamos anteriormente, o endereço IPv4 estão bem escassos. o IPv4 tem um máximo de 4.3 bilhões de endereços, poe isso a necessidade de trabalhar com mais endereços é cada vez mais real. Dessa forma, precisamos entender o que é IPv6.
+            1 - O IPv6, tem um espaço de endereço maior de 128 bits, fornecendo 340 undecilhões, ou seja, 340 seguidos de 36 zeros, de enredeços possíveis. Ele é representado por um conjunto de 8 hexadecatetos ou 9 conjunto de 16 bits.
+                Isso quer dizer que não há necessidade de fazer uma divisão entre endereços públicos e privados, pois a quantidade de endereços 
+                IPv6 é muito maior.
+
+            2 - Como você acabou de ver, os endereços IPv6 têm 128 bits de comprimento e são escritos como uma string de valores hexadecimais.
+                Cada quatro de bits são representados por um único dígito hexadecimal; para um total de 32 valores hexadecimais, conforme mostrado na figura.
+
+                   x  :   x  :   x  :   x  :   x  :   x  :   x  :   x
+
+                 0000  0000  0000  0000  0000  0000  0000  0000
+                 até : até : até : até : até : até : até : até :
+                 ffff   ffff   ffff   ffff   ffff   ffff   ffff   ffff  ---> 4 digitos Hexadecimais = 16 digitos binários
+                                |
+                                |
+                                |-->    0000  0000  0000  0000
+                                        até : até : até : até : 
+                                        1111  1111  1111  1111 
+
+            3 - No tópico sobre IPv4 aprendemos que através dos prefixos, consguimos ver quantos bits são para hots e quantos para rede, mas como isso se dá no IPv6?
+
+                No IPv6 o comprimento do prefixo pode variar de 0 a 128, o recomendado para LANs e a maioria dos pitros tipos de redes é / 64.
+
+            4 - Note que os endereços IPv6 não diferenciam maiúscolas de minúsculas.
+
+                O prefixo, ou parte da rede do endereço, tem 64 bits de comprimento, deixando outros 64 bits para a ID da interface (parte do host) do endereço.
+
+                No IPv6 é esperado que o menos segmento de rede seja sempre /64, já que diferente do IPv4, não é necessario se preocupar com desperdício de enredeços.
+
+Modulo 6:
+    Recursos:
+        O redirecionamento de portas e a técnica mais usada para disponibilizar serviços de uma rede interna através de u a rede externa. Para isso, precisamos de um roteador fazendo o NAT na sua porta WAN.
+
+        Após a solicitação chegar na parta WAN ela terá uma especificação para qual aplicação está buscando.
+
+    Modo de operação:
+        Router, Bridge, AP e Repetidor.
+            Quando falamos de dispositivos que possuem duas interfaces que podem travalhar independentes entre si, algumas vezes estamos falando também de como elas irão se interligar internamente no dispositivo. Isso acontece com roteadores de todos os tamanhos.
+
+            Router.
+                No modo router o roteador entende que irá trabalhar com um ip na interface WAN e outro no IP na interface LAN
+
+            Bridge.
+                No modo bridge o roteador passa a trabalhar as duas interface como um só, fazendo apenas uma ponte entre elas.
+                Tudo que "entra" no lado WAN, "sai" na interface LAN sem nenhum processamento do roteador.
+
+            Acess Points - AP
+                Quando falamos da interface wireless dos roteadores e Acess Points (AP), precisamos entender que sua interface pode ter 2 comportamentos: Repetidor ou AP.
+
+                O modo AP ocorre quando o roteador divulga um novo SSID (nova rede Wi-fi) para permitir a conexão.
+
+            Repetidor.
+                O modo repetidor refere-se a quando usamos o equipamento Wi-Fi para escutar a rede de um Acess Points e repetir a informação com a intenção de garantir que ela também funcione naquele local, onde antes a rede principal não possuia potência suficiente.
+
+                Vale ressaltar que é necessário que o ropetidor esteja em um ponto onde o sinal não está totalmente ruim e ainda consegue operar bem, caso contrário ele causará mais problemas do que traá soluções.
+
+Modulo 7:
+    Tipos de comunicação:
+        Quando estamos falando de transmissões de dados, existem diversas formdas de efetuar a comunicação.
+        Elas são dividas no formato em que duas estações de comportem.
+
+            Simplex:
+                É o formato de transmissão unidirecional onde as estações possuem hierarquias diferentes.
+                
+                A estanção que transmite está em um posto mais alto e só tera que fazer isso, sem opção de troca de dados com a estação receptora.
+                Esse formato é utilizado nas transmissões de TV, rádia AM e FM, TV por satélite e afins, onde o dispositivo de transmissão é uma torre de transmissão, um satélite ou rádio de alta potência.
+
+                Com ela, o dispositivo que recebe os dados até pode escolher qual canal selecionar, mas ele não consegue interaguir com a estação de transmissão.
+
+            Half-Duplex:
+                É o formato de transmição entre duas ou mais estações onde, para garantir que elas sejam bidirecional, as estações usam o mesmo meio ou faixa de frequência altenando quem transmite e quem recebe.
+
+                Se no primeiro momento a estação A está transmitindo oara a estação B, no segundo momento a estação B irá trasmitir as informações para a estação A.
+
+                Essa transmissão é mais comum no nosso cotidiano quando pensamos no wifi e rádios PTT. E nesse último é mais fácil de identificar, o PTT é o nome do botão que enquanto estiver pressionado o rádio ocupa a frequência e não permite que outro rádio transmita.
+
+                A altenância dos momentos se dá ao liberar o botão PTT.
+
+            Full-Duplex:
+                É o formato de trasmissão bidirecional onde ambras as estações conseguem transmitir e receber no mesmo momento.
+                
+                Geralmente isso se dá por divisões do meio de transmissão. No caso de rede, por exemplo, temos pares dedicados para a transmissão da estação A e recepcão para estação A. Essa comunicação é mais comum nas rede de computadores, telefonia fixa, internte através de fibra óptica e alguns tipos de transmissão através de radiofrequência.
