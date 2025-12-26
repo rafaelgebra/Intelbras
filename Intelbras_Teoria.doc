@@ -107,7 +107,7 @@ Hardwares
                 Comunicação direta entre dois dispositivos.
 
             MULTICAST:
-                Comunicação com dispositivos pre-determinado
+                Comunicação com dispositivos pré-determinado
 
             BROADCAST:
                 Envia comunicação para N disposição.
